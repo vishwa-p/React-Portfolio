@@ -1,0 +1,180 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body {
+  background-image: linear-gradient(to right, #ff5f6d, #ffc371);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+nav ul li {
+  display: inline;
+  float: right;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding-right: 40px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.profileimg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 300px;
+  padding-top: 50px;
+}
+
+.abt {
+  text-align: center;
+  color: rgb(129, 38, 38);
+  font-size: 30px;
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+  margin-top: -30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  font-size: larger;
+  text-align: center;
+  /* color: rgb(158, 4, 35); */
+  color: white;
+}
+
+.qualification {
+  padding-left: 30px;
+  color: white;
+}
+
+.quali {
+  text-transform: uppercase;
+  color: rgb(129, 38, 38);
+  padding-left: 30px;
+}
+
+.credential {
+  color: white;
+}
+
+.qualification {
+  display: flex;
+
+}
+
+.qualification div {
+  padding-right: 250px;
+}
+
+.experi, .skills, .workhead {
+  text-transform: uppercase;
+  color: rgb(129, 38, 38);
+  padding-left: 30px;
+
+}
+
+#footer {
+  display: flex;
+  margin-top: 25px;
+}
+.copyright{
+  padding-right: 207px;
+  margin-top: 25px;
+  font-size: 30px;
+  color:beige;
+}
+.smlogo{
+  padding-right: 33px;
+}
+
+
+.skill {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+}
+
+.plogo {
+  margin-top: 66px;
+  padding-right: 50px;
+
+}
+
+.experinece {
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  font-size: larger;
+  text-align: center;
+  /* color: rgb(158, 4, 35); */
+  background-image: linear-gradient(to right, #f71674, #fa9406);
+}
+
+.project {
+  margin: auto;
+  width: 50%;
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  font-size: larger;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(to right, #615f60, #5e4e3c);
+}
+
+.project h1 {
+  color: lightcoral;
+}
+
+.tech {
+  color: rgb(46, 35, 1);
+  font-size: larger;
+}
+
+.skillslogo p {
+  overflow: hidden;
+}

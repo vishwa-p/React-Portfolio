@@ -9,7 +9,7 @@ class Header extends React.Component {
         <div class="header__logo-container">
           <div class="header__logo-img-cont">
             <img
-              src="./profile.JPG"               
+              src="https://i.ibb.co/PFpYRWr/IMG-0135.jpg"               
               alt="VP profile pic"
               class="header__logo-img"
             />

@@ -34,7 +34,7 @@ class Mainbody extends React.Component {
   }
   componentDidMount() {
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/contents",
+      url: "https://laravel-portfolio123.herokuapp.com/api/contents",
       method: "GET",
     }).then((res) => {     
       this.setState({
@@ -42,7 +42,7 @@ class Mainbody extends React.Component {
       });
     });
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/projects",
+      url: "https://laravel-portfolio123.herokuapp.com/api/projects",
       method: "GET",
     }).then((res) => {
       this.setState({
@@ -50,7 +50,7 @@ class Mainbody extends React.Component {
       });
     });
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/qualifications",
+      url: "https://laravel-portfolio123.herokuapp.com/api/qualifications",
       method: "GET",
     }).then((res) => {
       this.setState({
@@ -63,7 +63,7 @@ class Mainbody extends React.Component {
       });
     });
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/experiences",
+      url: "https://laravel-portfolio123.herokuapp.com/api/experiences",
       method: "GET",
     }).then((res) => {
       this.setState({
@@ -75,7 +75,7 @@ class Mainbody extends React.Component {
       });
     });
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/skills",
+      url: "https://laravel-portfolio123.herokuapp.com/api/skills",
       method: "GET",
     }).then((res) => {      
       this.setState({

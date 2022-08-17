@@ -9,7 +9,7 @@ class Footer extends React.Component {
   }
   componentDidMount() {
     axios({
-      url: "http://laravel-portfolio123.herokuapp.com/api/socialmedia",
+      url: "https://laravel-portfolio123.herokuapp.com/api/socialmedia",
       method: "GET",
     }).then((res) => {     
       this.setState({

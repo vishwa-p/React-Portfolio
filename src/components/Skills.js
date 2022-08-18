@@ -4,22 +4,31 @@ class Skills extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      skills:[]
+      skills: [],
+      qualifications: [],
     };
   }
   componentDidMount() {
     axios({
       url: "https://laravel-portfolio123.herokuapp.com/api/skills",
       method: "GET",
-    }).then((res) => {     
-      this.setState({        
+    }).then((res) => {
+      this.setState({
         skills: res.data,
       });
     });
-    
+    axios({
+      url: "https://laravel-portfolio123.herokuapp.com/api/qualifications",
+      method: "GET",
+    }).then((res) => {
+      console.log(res.data);
+      this.setState({
+        qualifications: res.data,
+      });
+    });
   }
   render() {
-    const {skills}=this.state;
+    const { skills, qualifications } = this.state;
     return (
       <section id="about" class="about sec-pad">
         <div class="main-container">
@@ -32,43 +41,29 @@ class Skills extends React.Component {
           </h2>
           <div class="about__content">
             <div class="about__content-main">
-              <h3 class="about__content-title">Get to know me!</h3>
+              <h3 class="about__content-title">Qualifications</h3>
               <div class="about__content-details">
                 <p class="about__content-details-para">
-                  I'm a <strong>Frontend Web Developer</strong> building the
-                  Front-end of Websites and Web Applications that leads to the
-                  success of the overall product. Check out some of my work in
-                  the
-                  <strong>Projects</strong>section.
-                </p>
-                <p class="about__content-details-para">
-                  I also like sharing content related to the stuff that I have
-                  learned over the years in <strong>Web Development</strong> so
-                  it can help other people of the Dev Community. Feel free to
-                  Connect or Follow me on my
-                  <a href="" rel="noreferrer" target="_blank">
-                    Linkedin
-                  </a>
-                  where I post useful content related to Web Development and
-                  Programming
-                </p>
-                <p class="about__content-details-para">
-                  I'm open to <strong>Job</strong> opportunities where I can
-                  contribute, learn and grow. If you have a good opportunity
-                  that matches my skills and experience then don't hesitate to
-                  <strong>contact</strong>me.
+                  <strong>
+                  {qualifications.map((qualification) => (
+                    <div
+                      class="skills__skill"
+                      dangerouslySetInnerHTML={{ __html: qualification.details+"->"+qualification.credential +" ("+qualification.yearCompleted+")"}}
+                    >                    
+                    </div>
+                  ))}
+                  </strong>
                 </p>
               </div>
-              <a href="" class="btn btn--med btn--theme dynamicBgClr">
-                Contact
-              </a>
             </div>
             <div id="skill" class="about__content-skills">
               <h3 class="about__content-title">My Skills</h3>
               <div class="skills">
-                
-                {skills.map((skill) => (                  
-                  <div class="skills__skill" dangerouslySetInnerHTML={{ __html: skill.fontawesomeHTML }}></div>                  
+                {skills.map((skill) => (
+                  <div
+                    class="skills__skill"
+                    dangerouslySetInnerHTML={{ __html: skill.fontawesomeHTML }}
+                  ></div>
                 ))}
               </div>
             </div>

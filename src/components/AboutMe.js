@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import myTxtFile from '../components/VishwaPatel-CV.docx';
 class AboutMe extends React.Component {
   constructor(props) {
     super(props);
@@ -29,8 +30,8 @@ class AboutMe extends React.Component {
             </p>
           </div>
           <div class="home-hero__cta">
-            <a href="#projects" class="btn btn--bg">
-              Projects
+            <a href={myTxtFile} class="btn btn--bg">
+              Resume
             </a>
           </div>
         </div>

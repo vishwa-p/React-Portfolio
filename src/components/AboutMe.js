@@ -6,6 +6,7 @@ class AboutMe extends React.Component {
     super(props);
     this.state = {
       content: null,
+      socialMedia: [],
     };
   }
   componentDidMount() {
@@ -17,10 +18,17 @@ class AboutMe extends React.Component {
         content: res.data[0].content
       });
     });
-    
+    axios({
+      url: "https://laravel-portfolio123.herokuapp.com/api/socialmedia",
+      method: "GET",
+    }).then((res) => {     
+      this.setState({
+        socialMedia:res.data
+      });
+    });
   }
   render() {
-    const {content}=this.state;
+    const {content,socialMedia}=this.state;
     return (
       <section class="home-hero">
         <div class="home-hero__content">
@@ -35,69 +43,28 @@ class AboutMe extends React.Component {
             </a>
           </div>
         </div>
+        {socialMedia.map((media) => (
+          <a href={media.url}> <p className="socialMedia" dangerouslySetInnerHTML={{ __html: media.logo }}></p></a>
+          ))}            
         <div class="home-hero__socials">
+        {socialMedia.map((media) => (
           <div class="home-hero__social">
             <a
-              href=""
+              href={media.url}
               class="home-hero__social-icon-link"
               rel="noreferrer"
               target="_blank"
             >
-              <img
-                src="linkedin-dark.svg"
+            <img
+                src={media.logo}
                 alt=""
                 class="home-hero__social-icon"
-              />
+                
+              />            
             </a>
           </div>
-          <div class="home-hero__social">
-            <a
-              href=""
-              class="home-hero__social-icon-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                src="twitter-dark.svg"
-                alt=""
-                class="home-hero__social-icon"
-              />
-            </a>
-          </div>
-          <div class="home-hero__social">
-            <a
-              href=""
-              class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img src="yt-dark.svg" alt="" class="home-hero__social-icon" />
-            </a>
-          </div>
-          <div class="home-hero__social">
-            <a
-              href=""
-              class="home-hero__social-icon-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img
-                src="github-dark.svg"
-                alt=""
-                class="home-hero__social-icon"
-              />
-            </a>
-          </div>
-          <div class="home-hero__social">
-            <a
-              href=""
-              class="home-hero__social-icon-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <img src="book-dark.svg" alt="" class="home-hero__social-icon" />
-            </a>
-          </div>
+          ))}  
+        
         </div>
         <div class="home-hero__mouse-scroll-cont">
           <div class="mouse"></div>

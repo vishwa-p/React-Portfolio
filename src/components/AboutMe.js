@@ -43,29 +43,8 @@ class AboutMe extends React.Component {
             </a>
           </div>
         </div>
-        {socialMedia.map((media) => (
-          <a href={media.url}> <p className="socialMedia" dangerouslySetInnerHTML={{ __html: media.logo }}></p></a>
-          ))}            
-        <div class="home-hero__socials">
-        {socialMedia.map((media) => (
-          <div class="home-hero__social">
-            <a
-              href={media.url}
-              class="home-hero__social-icon-link"
-              rel="noreferrer"
-              target="_blank"
-            >
-            <img
-                src={media.logo}
-                alt=""
-                class="home-hero__social-icon"
-                
-              />            
-            </a>
-          </div>
-          ))}  
-        
-        </div>
+       
+      
         <div class="home-hero__mouse-scroll-cont">
           <div class="mouse"></div>
         </div>

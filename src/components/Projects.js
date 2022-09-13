@@ -108,12 +108,23 @@ class Projects extends React.Component {
                     class="projects__row-content-desc"
                     dangerouslySetInnerHTML={{ __html: project.description }}
                   ></p>
+                  <p
+                    class="projects__row-content-desc"
+                    dangerouslySetInnerHTML={{ __html: project.technologies }}
+                  ></p>
                   <a
-                    class="btn btn--med btn--theme dynamicBgClr"
+                    class="btn btn--med btn--theme dynamicBgClr srccodebtn"
                     href={project.gitUrl}
                     target="_blank"
                   >
-                    Case Study
+                    Source Code
+                  </a>
+                  <a
+                    class="btn btn--med btn--theme dynamicBgClr"
+                    href={project.liveUrl}
+                    target="_blank"
+                  >
+                    Demo
                   </a>
                 </div>
               </div>

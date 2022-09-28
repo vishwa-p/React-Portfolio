@@ -535,7 +535,8 @@ h2 {
   overflow: hidden;
 }
 .projects__row-img {
-  width: 100%;
+  width: 80%;
+  
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
@@ -559,6 +560,9 @@ h2 {
   max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 3rem;
+}
+.srccode{
+  margin-bottom: 22px;
 }
 .contact {
   background: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8));

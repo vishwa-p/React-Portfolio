@@ -20,68 +20,7 @@ class Projects extends React.Component {
   }
   render() {
     const { project } = this.state;
-    return (
-      // <section id="projects" class="projects sec-pad">
-      //   <div class="main-container">
-      //     <h2 class="heading heading-sec heading-sec__mb-bg">
-      //       <span class="heading-sec__main">Projects</span>
-      //       <span class="heading-sec__sub">
-      //         Here you have list of my projects which I have created and each
-      //         project containing description, source code, working URL.
-      //       </span>
-      //     </h2>
-      //     <div class="projects__content">
-      //       <div class="projects__row">
-      //         <div class="projects__row-img-cont">
-      //           <img
-      //             src="yubter.jpeg"
-      //             alt=""
-      //             class="projects__row-img"
-      //             loading="lazy"
-      //           />
-      //         </div>
-      //         <div class="projects__row-content">
-      //           {project.map((project) => (
-      //             <div className="prolist" key={project.id}>
-      //               <img
-      //                 src={project.photo}
-      //                 alt=""
-      //                 class="projects__row-img"
-      //                 loading="lazy"
-      //               />
-      //               <div className="prodes">
-      //               <h3 class="projects__row-content-title">{project.title}</h3>
-
-      //               <p
-      //                 class="projects__row-content-desc"
-      //                 dangerouslySetInnerHTML={{ __html: project.description }}
-      //               ></p>
-      //               <p
-      //                 class="projects__row-content-desc"
-      //                 dangerouslySetInnerHTML={{ __html: project.technologies }}
-      //               ></p>
-      //               <a
-      //                 class="btn btn--med btn--theme dynamicBgClr"
-      //                 href={project.gitUrl}
-      //                 target="_blank"
-      //               >
-      //                 Github
-      //               </a>
-      //               <a
-      //                 class="btn btn--med btn--theme dynamicBgClr"
-      //                 href={project.liveUrl}
-      //                 target="_blank"
-      //               >
-      //                 Live Demo
-      //               </a>
-      //               </div>
-      //             </div>
-      //           ))}
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </div>
-      // </section>
+    return (      
       <section id="projects" class="projects sec-pad">
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
@@ -113,7 +52,7 @@ class Projects extends React.Component {
                     dangerouslySetInnerHTML={{ __html: project.technologies }}
                   ></p>
                   <a
-                    class="btn btn--med btn--theme dynamicBgClr srccodebtn"
+                    class="btn btn--med btn--theme dynamicBgClr srccodebtn srccode"
                     href={project.gitUrl}
                     target="_blank"
                   >

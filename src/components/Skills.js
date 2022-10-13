@@ -74,7 +74,7 @@ class Skills extends React.Component {
                       dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities +experience.startDate+" to "+experience.endDate}}
                     >                    
                     </div>
-                    </div>
+                    
                   ))}
                   </strong>
                 </p>

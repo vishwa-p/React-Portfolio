@@ -71,7 +71,7 @@ class Skills extends React.Component {
                   {experiences.map((experience) => (
                     <div
                       class="skills__skill experi"
-                      dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities }}
+                      dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities +experience.startDate+" to "+experience.endDate}}
                     >                    
                     </div>
                   ))}

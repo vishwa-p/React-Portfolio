@@ -24,10 +24,9 @@ class Projects extends React.Component {
       <section id="projects" class="projects sec-pad">
         <div class="main-container">
           <h2 class="heading heading-sec heading-sec__mb-bg">
-            <span class="heading-sec__main">Projects</span>
+            <span class="heading-sec__main">Recent Projects</span>
             <span class="heading-sec__sub">
-              Here you will find some of the personal and clients projects that
-              I created with each project containing its own case study
+             Here you will find list of my recents projects on which I worked on and still updating to add new features.
             </span>
           </h2>
           <div class="projects__content">

@@ -37,8 +37,7 @@ class Footer extends React.Component {
             <h2 class="heading heading-sm text-lt">Vishwa Patel</h2>
             <p class="main-footer__short-desc">
               A Frontend focused Web Developer building
-               Web Applications that leads to the success of the overall
-              product
+               Web Applications that leads to the overall success of organization and my personal progress.
             </p>
           </div>
         </div>

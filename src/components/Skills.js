@@ -69,10 +69,11 @@ class Skills extends React.Component {
                 <p class="about__content-details-para">
                   <strong>
                   {experiences.map((experience) => (
-                    <div
+                   <div
                       class="skills__skill experi"
-                      dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities }}
+                      dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities +experience.startDate+" to "+experience.endDate}}
                     >                    
+                    </div>
                     </div>
                   ))}
                   </strong>

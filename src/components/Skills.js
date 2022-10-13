@@ -5,6 +5,7 @@ class Skills extends React.Component {
     super(props);
     this.state = {
       skills: [],
+      experiences:[],
       qualifications: [],
     };
   }
@@ -18,6 +19,14 @@ class Skills extends React.Component {
       });
     });
     axios({
+      url: "https://laravel-portfolio123.herokuapp.com/api/experiences",
+      method: "GET",
+    }).then((res) => {
+      this.setState({
+        experiences: res.data,
+      });
+    });
+    axios({
       url: "https://laravel-portfolio123.herokuapp.com/api/qualifications",
       method: "GET",
     }).then((res) => {
@@ -28,7 +37,7 @@ class Skills extends React.Component {
     });
   }
   render() {
-    const { skills, qualifications } = this.state;
+    const { skills, experiences,qualifications } = this.state;
     return (
       <section id="about" class="about sec-pad">
         <div class="main-container">
@@ -49,6 +58,20 @@ class Skills extends React.Component {
                     <div
                       class="skills__skill"
                       dangerouslySetInnerHTML={{ __html: qualification.details+"->"+qualification.credential +" ("+qualification.yearCompleted+")"}}
+                    >                    
+                    </div>
+                  ))}
+                  </strong>
+                </p>
+              </div>
+              <h3 class="about__content-title">Experiences</h3>
+              <div class="about__content-details">              
+                <p class="about__content-details-para">
+                  <strong>
+                  {experiences.map((experience) => (
+                    <div
+                      class="skills__skill experi"
+                      dangerouslySetInnerHTML={{ __html: experience.companyName+" ("+experience.position +")"+""+experience.responsibilities }}
                     >                    
                     </div>
                   ))}
